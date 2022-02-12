@@ -1,5 +1,57 @@
-<ul>
-        <li><a [routerLink]="['/']">Home</a></li>
-</ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <a class="navbar-brand" href="/">Garden Minder</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav" routerLinkActive="active">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/dashboard" [routerLinkActive]="['is-active']"
+                >Dashboard </a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="inventory"
+                routerLinkActive="is-active"
+                >Inventory</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                routerLink="other"
+                routerLinkActive="is-active"
+                >Other</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                routerLink="other"
+                routerLinkActive="is-active"
+                >Other</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
-<router-outlet></router-outlet>
+<div class="container pt-4">
+  <router-outlet></router-outlet>
+</div>
